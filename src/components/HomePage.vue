@@ -1,25 +1,24 @@
 <template>
-  <div>
-    <div>
-    </div>
-    {{routes}}
-  </div>
+  <suspense>
+    <template #fallback>
+      <div class="loading">
+        <h1>asdasewd</h1>
+      </div>
+    </template>
+
+    <template #default>
+      <div>
+        <HomeAsync />
+      </div>
+    </template>
+  </suspense>
 </template>
 
-<script>
-import { useRouter } from 'vue-router'
-export default {
-  setup() {
-    const router = useRouter()
-    const routes = router.options.routes
-    const routesList = routes.splice()
-    return {
-      routesList
-    }
-  }
-}
+<script setup>
+import { defineAsyncComponent } from "vue";
+const HomeAsync = defineAsyncComponent(() => {
+  import('./HomeCom.vue')
+})
 </script>
 
-<style>
-
-</style>
+<style></style>

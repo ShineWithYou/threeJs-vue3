@@ -8,7 +8,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "ant-design-vue": "^2.2.8",
+    "axios": "^0.26.0",
     "express": "^4.17.3",
+    "less": "^4.1.2",
     "three": "^0.138.2",
     "vue": "^3.2.25",
     "vue-router": "^4.0.12",
@@ -16,6 +19,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.2.0",
+    "unplugin-vue-components": "^0.17.21",
     "vite": "^2.8.0"
   }
 }
