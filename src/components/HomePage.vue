@@ -1,24 +1,19 @@
 <template>
-  <suspense>
-    <template #fallback>
-      <div class="loading">
-        <h1>asdasewd</h1>
-      </div>
-    </template>
-
-    <template #default>
-      <div>
-        <HomeAsync />
-      </div>
-    </template>
-  </suspense>
+  <div>
+    ASJHASJKHDAJK
+    <HomeAsync></HomeAsync>
+  </div>
 </template>
-
 <script setup>
-import { defineAsyncComponent } from "vue";
-const HomeAsync = defineAsyncComponent(() => {
-  import('./HomeCom.vue')
-})
+import { onMounted, defineAsyncComponent } from "vue";
+const HomeAsync = defineAsyncComponent(() =>
+  import("../components/HomeCom.vue")
+);
+
+onMounted(async () => {
+  //   let result = await api.getHomepage();
+  //   console.log(result);
+});
 </script>
 
-<style></style>
+<style lang="less" scoped></style>

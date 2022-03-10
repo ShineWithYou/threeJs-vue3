@@ -1,18 +1,17 @@
 <template>
-  <ul>
-    <li v-for="(item, i) in heroList || []" :key="i">
-      {{ item.category }}
-    </li>
-  </ul>
+  <div>
+    {{data}}
+  </div>
 </template>
 
 <script setup>
 import * as api from "../api/index";
 import { reactive } from "vue";
+let result = await api.getHomePage();
 
-const result = await api.getHomePage();
-console.log(result.data.hero);
-const heroList = reactive(result.data.hero);
+const data = reactive(result.hero);
+console.log(data);
 </script>
 
-<style></style>
+<style lang="less" scoped>
+</style>
