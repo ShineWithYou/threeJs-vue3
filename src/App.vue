@@ -11,6 +11,9 @@ let router = useRouter();
 </template>
 
 <style>
+body {
+  margin: 0;
+}
 .ant-menu-submenu {
   z-index: 1000000000 !important;
 }
